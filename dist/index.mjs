@@ -134,7 +134,9 @@ function logOptimizationStats(rootConfig, sizesMap, ansiColors) {
 const applySharp = async (filePath, buffer, options) => {
   const sharp = (await import("sharp")).default;
   const extName = extname(filePath).replace(".", "").toLowerCase();
-  return await sharp(buffer, { animated: extName === "gif" }).toFormat(extName, options[extName]).toBuffer();
+  return await sharp(buffer, { animated: extName === "gif" }).toFormat(extName, options[extName]).metadata(() => {
+    return void 0;
+  }).toBuffer();
 };
 const processFile = async (filePath, buffer, options, sizesMap, errorsMap) => {
   try {

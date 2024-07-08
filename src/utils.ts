@@ -160,6 +160,9 @@ export const applySharp = async (filePath: string, buffer: Buffer, options: Opti
   const extName: string = extname(filePath).replace('.', '').toLowerCase();
   return await sharp(buffer, { animated: extName === 'gif' })
     .toFormat(extName as keyof FormatEnum, options[extName])
+    .metadata(() => {
+      return undefined;
+    })
     .toBuffer();
 };
 
