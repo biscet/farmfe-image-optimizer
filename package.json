@@ -12,7 +12,7 @@
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/biscet/farmfe-image-optimizer"
+    "url": "git+https://github.com/biscet/farmfe-image-optimizer.git"
   },
   "keywords": [
     "farm",
