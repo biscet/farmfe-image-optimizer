@@ -48,5 +48,3 @@ const DEFAULT_OPTIONS = {
 ```
 
 Данный плагин был сделан на основе [Vite Image Optimizer](https://github.com/FatehAK/vite-plugin-image-optimizer)
-
-[MIT](./LICENSE)
