@@ -1,6 +1,6 @@
 {
   "name": "farmfe-image-optimizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Image Optimizer for Farmfe",
   "author": "Егор Прохоров <befealmellow@gmail.com>",
   "license": "MIT",
@@ -23,7 +23,7 @@
     "sharp"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && yarn emit-dts",
     "emit-dts": "dts-bundle-generator --no-check --project tsconfig.json --out-file ./dist/index.d.ts ./src/index.ts"
   },
   "dependencies": {
